@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
-.sr-only:not(:focus):not(:active) {
+.sr-only:not(:focus, :active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -39,8 +39,8 @@
   --color-background-form: var(--color-white);
   --color-border-with-background: var(--color-purple-dark);
   --font-base-size: 1rem;
-  --font-family-base: 'Open Sans', arial, helvetica, sans-serif;
-  --font-family-heading: 'Matemasie-Regular', 'Comic Sans MS', cursive;
+  --font-family-base: "Open Sans", arial, helvetica, sans-serif;
+  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
   --transition-time-short: 300ms;
   --transition-time-long: 600ms;
   --transition-timing-function: ease-in-out;
@@ -75,10 +75,7 @@ html {
   background-color: var(--color-background-secondary);
   font-size: 1rem;
   text-decoration: none;
-  transition: background-color var(--transition-time-short)
-      var(--transition-timing-function),
-    color var(--transition-time-short) var(--transition-timing-function),
-    border-color var(--transition-time-short) var(--transition-timing-function);
+  transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
 }
 
 .button:hover {
@@ -93,19 +90,19 @@ html {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./fonts/Matemasie-Regular.ttf') format('woff2');
+  src: url("./fonts/Matemasie-Regular.ttf") format("woff2");
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./fonts/OpenSans-VariableFont_wdth,wght.ttf') format('woff2');
+  src: url("./fonts/OpenSans-VariableFont_wdth,wght.ttf") format("woff2");
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: 700;
-  src: url('./fonts/OpenSans-VariableFont_wdth,wght.ttf') format('woff2');
+  src: url("./fonts/OpenSans-VariableFont_wdth,wght.ttf") format("woff2");
 }
 /*** Allt meginmál notar open sans ***/
 html,
@@ -157,7 +154,7 @@ footer h2 {
   margin-bottom: var(--spacing);
 }
 
-@media (min-width: 700px) {
+@media (width >= 700px) {
   footer > .content {
     grid-template-columns: repeat(var(--columns), 1fr);
     grid-template-rows: auto;
@@ -179,8 +176,7 @@ dd {
 
 header,
 .wrapper {
-  animation: var(--transition-time-long) var(--transition-timing-function)
-    fade-in;
+  animation: var(--transition-time-long) var(--transition-timing-function) fade-in;
 }
 
 /** Haus á síðum **/
@@ -210,7 +206,7 @@ nav ul li {
   text-align: left;
 }
 
-@media (min-width: 800px) {
+@media (width >= 800px) {
   nav ul {
     display: block;
   }
@@ -235,7 +231,7 @@ nav ul li {
   background-color: var(--color-background-primary);
 }
 
-@media (min-width: 800px) {
+@media (width >= 800px) {
   .wrapper {
     gap: var(--vertical-space-large);
   }
@@ -249,7 +245,7 @@ nav ul li {
   margin-bottom: var(--spacing);
 }
 
-@media (min-width: 800px) {
+@media (width >= 800px) {
   .wrapper .wrapper-content {
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
@@ -269,7 +265,7 @@ nav ul li {
   width: 100%;
 }
 
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .card {
     grid-column: span 5;
   }
@@ -347,14 +343,14 @@ nav ul li {
   width: 100%;
 }
 
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .cards > .content {
     grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
     grid-template-rows: auto;
   }
 }
 /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
-.sr-only:not(:focus):not(:active) {
+.sr-only:not(:focus, :active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -393,8 +389,8 @@ nav ul li {
   --color-background-form: var(--color-white);
   --color-border-with-background: var(--color-purple-dark);
   --font-base-size: 1rem;
-  --font-family-base: 'Open Sans', arial, helvetica, sans-serif;
-  --font-family-heading: 'Matemasie-Regular', 'Comic Sans MS', cursive;
+  --font-family-base: "Open Sans", arial, helvetica, sans-serif;
+  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
   --transition-time-short: 300ms;
   --transition-time-long: 600ms;
   --transition-timing-function: ease-in-out;
@@ -460,7 +456,7 @@ img {
   border-radius: var(--border-radius-image);
 }
 
-@media (min-width: 500px) {
+@media (width >= 500px) {
   .intro {
     flex-direction: row;
   }
@@ -502,7 +498,7 @@ fieldset textarea {
   background-color: var(--color-background-form);
 }
 
-fieldset input[type='checkbox'] {
+fieldset input[type=checkbox] {
   display: inline-block;
   margin-right: calc(var(--spacing) * 0.5);
   width: auto;
@@ -541,7 +537,7 @@ table tr td:last-child {
   border-bottom-right-radius: var(--border-radius-regular);
 }
 
-table tbody tr:nth-child(2n + 1) {
+table tbody tr:nth-child(2n+1) {
   background-color: var(--color-background-secondary);
 }
 

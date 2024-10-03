@@ -1,5 +1,6 @@
-/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
-.sr-only:not(:focus):not(:active) {
+
+//* hjálpar class sem felur sjónrænt en skjálesarar lesa *//
+.sr-only:not(:focus, :active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -22,7 +23,7 @@
   --border-width: 1px;
   --border-radius-regular: 5px;
   --border-radius-image: 10px;
-  --border-regular: 1px solid #000; 
+  --border-regular: 1px solid #000;
   --border-with-background: 4px solid #c9b;
   --columns: 12;
   --gutter: 30px;
