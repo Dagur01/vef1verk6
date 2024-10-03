@@ -1,0 +1,17 @@
+header,
+.wrapper {
+  animation: var(--transition-time-long) var(--transition-timing-function)
+    fade-in;
+}
+
+/** Haus á síðum **/
+
+header {
+    padding: var(--spacing) calc(var(--spacing) * 1.5);
+    width: 100%;
+  
+    background-color: var(--color-background-secondary);
+    border-bottom: var(--border-with-background);
+    text-align: center;
+  }
+  

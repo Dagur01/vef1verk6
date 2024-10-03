@@ -1,0 +1,16 @@
+html {
+    font-size: var(--font-size-base);
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* og látum erfast á allt */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
